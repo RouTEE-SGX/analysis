@@ -1,0 +1,13 @@
+state=$1  # { idle | busy }
+python3 client.py < scripts/signedAddUser > res/$state"_adduser"
+echo "[DONE] adduser"
+python3 client.py < scripts/signedDepositReq > res/$state"_depositreq"
+echo "[DONE] depositreq"
+python3 client.py < scripts/signedDepositTx > res/$state"_deposittx_debug"
+echo "[DONE] deposittx_debug"
+python3 client.py < scripts/signedPayment > res/$state"_payment"
+echo "[DONE] payment"
+python3 client.py < scripts/signedSettleReq > res/$state"_settle"
+echo "[DONE] settle"
+python3 client.py < scripts/signedUpdateSPV > res/$state"_updatespv"
+echo "[DONE] updatespv"

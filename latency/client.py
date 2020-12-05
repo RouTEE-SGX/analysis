@@ -18,9 +18,7 @@ import ecdsa
 import hashlib
 
 # rouTEE IP address
-# SERVER_IP = "127.0.0.1"
-SERVER_IP = "satoshi.snu.ac.kr"
-# PORT = 7223
+SERVER_IP = "127.0.0.1"
 PORT = 7327
 
 # open socket
